@@ -18,6 +18,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <div className="line"></div>
         <div className="menu">
           <div className="close-nav" onClick={() => setNavMenu(false)}>
             <img src="assets/shared/icon-close.svg" alt="nav close" />
@@ -60,12 +61,17 @@ const StyledNavbar = styled.section`
   .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem;
-    /* border: 1px solid red; */
+  }
+
+  .line {
+    display: none;
   }
 
   .logo {
     display: flex;
+    align-items: center;
     gap: 1rem;
     width: 100%;
     justify-content: space-between;
@@ -142,12 +148,10 @@ const StyledNavbar = styled.section`
     .navbar {
       padding: 0;
       padding-left: 2rem;
-      max-width: 90rem;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
     }
+
     .menu {
       position: static;
       width: auto;
@@ -196,11 +200,36 @@ const StyledNavbar = styled.section`
     }
   }
   @media (min-width: 75rem) {
+    .navbar {
+      padding-left: 8rem;
+    }
+    .menu {
+      width: 80%;
+    }
+
+    .line {
+      display: block;
+      width: 35%;
+      height: 1px;
+      margin: 0 2rem;
+      background-color: var(--Grayish-Blue);
+    }
+
     .item {
       span {
         color: var(--White);
         display: block;
       }
+    }
+  }
+
+  @media (min-width: 95rem) {
+    .navbar {
+      padding-left: 15rem;
+    }
+
+    .line {
+      width: 60%;
     }
   }
 `;
