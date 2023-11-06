@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ErrorPage = () => {
   return (
     <StyledErrorPage>
-      <img src="/not-found.svg" alt="" />
+      <img src="src/assets/not-found.svg" alt="" />
       <Link to="/">back to home page</Link>
     </StyledErrorPage>
   );

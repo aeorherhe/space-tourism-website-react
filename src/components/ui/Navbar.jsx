@@ -10,18 +10,18 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src="assets/shared/logo.svg" alt="logo" />
+            <img src="src/assets/shared/logo.svg" alt="logo" />
           </Link>
           <div className="nav-toggle" onClick={() => setNavMenu(true)}>
             {!navMenu && (
-              <img src="assets/shared/icon-hamburger.svg" alt="nav open" />
+              <img src="src/assets/shared/icon-hamburger.svg" alt="nav open" />
             )}
           </div>
         </div>
         <div className="line"></div>
         <div className="menu">
           <div className="close-nav" onClick={() => setNavMenu(false)}>
-            <img src="assets/shared/icon-close.svg" alt="nav close" />
+            <img src="src/assets/shared/icon-close.svg" alt="nav close" />
           </div>
           <ul className="menu-items">
             {navigationMenu.map(({ id, title, url }) => {
