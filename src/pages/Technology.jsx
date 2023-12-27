@@ -8,7 +8,7 @@ const Technology = () => {
   const { name, images, description } = technology;
 
   return (
-    <StyledSection type="technology">
+    <StyledSection $page="technology">
       <StyledTechnology>
         <StyledTitle>
           <span>03 </span>

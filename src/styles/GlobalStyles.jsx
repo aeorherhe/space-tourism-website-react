@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { backgroundImagesMediaQueries } from "./funcStyles";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -127,40 +128,42 @@ export const StyledSection = styled.section`
     max-width: 80rem;
   }
 
-  background-image: ${(props) =>
-    props.type === "home"
-      ? "url(/assets/home/background-home-mobile.jpg)"
-      : props.type === "destination"
-      ? "url(/assets/destination/background-destination-mobile.jpg)"
-      : props.type === "crew"
-      ? "url(/assets/crew/background-crew-mobile.jpg)"
-      : props.type === "technology"
-      ? "url(/assets/technology/background-technology-mobile.jpg)"
-      : ""};
-
-  @media (min-width: 45rem) {
-    background-image: ${(props) =>
-      props.type === "home"
-        ? "url(/assets/home/background-home-tablet.jpg)"
-        : props.type === "destination"
-        ? "url(/assets/destination/background-destination-tablet.jpg)"
-        : props.type === "crew"
-        ? "url(/assets/crew/background-crew-tablet.jpg)"
-        : props.type === "technology"
-        ? "url(/assets/technology/background-technology-tablet.jpg)"
-        : ""};
-  }
-
-  @media (min-width: 60rem) {
-    background-image: ${(props) =>
-      props.type === "home"
-        ? "url(/assets/home/background-home-desktop.jpg)"
-        : props.type === "destination"
-        ? "url(/assets/destination/background-destination-desktop.jpg)"
-        : props.type === "crew"
-        ? "url(/assets/crew/background-crew-desktop.jpg)"
-        : props.type === "technology"
-        ? "url(/assets/technology/background-technology-desktop.jpg)"
-        : ""};
-  }
+  ${({ $page }) => $page && backgroundImagesMediaQueries($page)}
 `;
+
+// background-image: ${(props) =>
+//   props.type === "home"
+//     ? "url(/assets/home/background-home-mobile.jpg)"
+//     : props.type === "destination"
+//     ? "url(/assets/destination/background-destination-mobile.jpg)"
+//     : props.type === "crew"
+//     ? "url(/assets/crew/background-crew-mobile.jpg)"
+//     : props.type === "technology"
+//     ? "url(/assets/technology/background-technology-mobile.jpg)"
+//     : ""};
+
+// @media (min-width: 45rem) {
+//   background-image: ${(props) =>
+//     props.type === "home"
+//       ? "url(/assets/home/background-home-tablet.jpg)"
+//       : props.type === "destination"
+//       ? "url(/assets/destination/background-destination-tablet.jpg)"
+//       : props.type === "crew"
+//       ? "url(/assets/crew/background-crew-tablet.jpg)"
+//       : props.type === "technology"
+//       ? "url(/assets/technology/background-technology-tablet.jpg)"
+//       : ""};
+// }
+
+// @media (min-width: 60rem) {
+//   background-image: ${(props) =>
+//     props.type === "home"
+//       ? "url(/assets/home/background-home-desktop.jpg)"
+//       : props.type === "destination"
+//       ? "url(/assets/destination/background-destination-desktop.jpg)"
+//       : props.type === "crew"
+//       ? "url(/assets/crew/background-crew-desktop.jpg)"
+//       : props.type === "technology"
+//       ? "url(/assets/technology/background-technology-desktop.jpg)"
+//       : ""};
+// }

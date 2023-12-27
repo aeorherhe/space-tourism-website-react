@@ -3,7 +3,7 @@ import { Div1, StyledSection } from "../styles/GlobalStyles";
 
 const Home = () => {
   return (
-    <StyledSection type="home">
+    <StyledSection $page="home">
       <StyledHome>
         <Div1 className="header">
           <h2 type="uppercase">So, you want to travel to</h2>

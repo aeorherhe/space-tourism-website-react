@@ -8,8 +8,10 @@ const Destination = () => {
   const [destination, setDestination] = useState(destinationData[0]);
   const { name, images, description: desc, distance, travel } = destination;
 
+  // console.log(images.webp);
+
   return (
-    <StyledSection type="destination">
+    <StyledSection $page="destination">
       <StyledDestination>
         <StyledTitle>
           <span>01 </span>

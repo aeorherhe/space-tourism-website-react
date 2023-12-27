@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { sharedImages } from "../assets";
 
 const ErrorPage = () => {
   return (
     <StyledErrorPage>
-      <img src="/not-found.svg" alt="" />
+      <img src={sharedImages.pageNotFound} alt="page not found" />
       <Link to="/">back to home page</Link>
     </StyledErrorPage>
   );

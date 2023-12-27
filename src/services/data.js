@@ -1,5 +1,5 @@
 // import styled from "styled-components";
-import data from "./data.json";
+import data from "../data.json";
 
 export const destinationData = data.destinations;
 export const crewData = data.crew;

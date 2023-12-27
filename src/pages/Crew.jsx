@@ -8,7 +8,7 @@ const Crew = () => {
   const { role, name, images, bio } = crewMember;
 
   return (
-    <StyledSection type="crew">
+    <StyledSection $page="crew">
       <StyledCrew>
         <StyledTitle>
           <span>02 </span>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { navigationMenu } from "../../services/data";
+import { sharedImages } from "../../assets";
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -10,18 +11,18 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src="assets/shared/logo.svg" alt="logo" />
+            <img src={sharedImages.logo} alt="logo" />
           </Link>
           <div className="nav-toggle" onClick={() => setNavMenu(true)}>
             {!navMenu && (
-              <img src="assets/shared/icon-hamburger.svg" alt="nav open" />
+              <img src={sharedImages.hamburgerIcon} alt="nav open" />
             )}
           </div>
         </div>
         <div className="line"></div>
         <div className="menu">
           <div className="close-nav" onClick={() => setNavMenu(false)}>
-            <img src="assets/shared/icon-close.svg" alt="nav close" />
+            <img src={sharedImages.closeIcon} alt="nav close" />
           </div>
           <ul className="menu-items">
             {navigationMenu.map(({ id, title, url }) => {
